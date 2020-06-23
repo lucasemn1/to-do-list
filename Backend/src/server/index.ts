@@ -1,3 +1,4 @@
 import app from './app';
 
-app.listen(3333);
+console.log(process.env.PORT);
+app.listen(process.env.PORT ? process.env.PORT : 5000);

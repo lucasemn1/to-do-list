@@ -2,8 +2,7 @@ import {
     Entity, 
     Column, 
     PrimaryGeneratedColumn, 
-    OneToMany, 
-    getConnection
+    OneToMany
 } from 'typeorm';
 import { Item } from './Item';
 

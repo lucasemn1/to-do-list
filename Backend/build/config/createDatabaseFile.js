@@ -1,8 +1,9 @@
-import * as path from 'path';
-import { writeFileSync } from 'fs';
-const env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
-
-const databaseConfig = {
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var path = require("path");
+var fs_1 = require("fs");
+var env = process.env.NODE_ENV ? process.env.NODE_ENV : 'development';
+var databaseConfig = {
     development: {
         type: "sqlite",
         database: "src/database/database.sqlite",
@@ -23,7 +24,6 @@ const databaseConfig = {
             subscribersDir: "src/subscriber"
         }
     },
-
     production: {
         type: "postgres",
         url: process.env.DATABASE_URL,
@@ -50,15 +50,6 @@ const databaseConfig = {
         }
     }
 };
-
-writeFileSync(
-    path.resolve(
-        __dirname,
-        '..',
-        '..',
-        'ormconfig.json'
-    ),
-    JSON.stringify(databaseConfig[env])
-);
-
+fs_1.writeFileSync(path.resolve(__dirname, '..', '..', 'ormconfig.json'), JSON.stringify(databaseConfig[env]));
 console.log('OK');
+//# sourceMappingURL=createDatabaseFile.js.map
