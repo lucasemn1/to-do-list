@@ -6,9 +6,9 @@ Disponível [aqui](http://backendtodoapp.herokuapp.com/)
 ## 💻 Tecnologias 
 * NodeJS
 * Javascript (em ambiente de produção)
-* Typescript (em ambiente de desenolvimento)
+* Typescript (em ambiente de desenvolvimento)
 * TypeORM
-* Sqlite3 (em ambiente de desenolvimento)
+* Sqlite3 (em ambiente de desenvolvimento)
 * PostgreSQL (em ambiente de produção)
 
 ## ❗Pré-requisitos
@@ -37,19 +37,19 @@ $ npx typeorm schema:sync
 
 5. Execute o servidor
 
-* Em modo de desenvolvimento
+5.1 Em modo de desenvolvimento
 ```
 $ npm run start-dev
 ```
 
-* Em modo de produção
+5.2 Em modo de produção
 
-** Gere a build
+5.2.1 Gere a build
 ```
 $npx tsc
 ```
 
-** Execute o servidor
+5.2.2 Execute o servidor
 ```
 $ npm run start
 ```
